@@ -1,10 +1,10 @@
 editor.md for Yii2
 ==================
 
-[![Latest Stable Version](https://poser.pugx.org/yiier/editor.md/v/stable)](https://packagist.org/packages/yiier/editor.md) 
-[![Total Downloads](https://poser.pugx.org/yiier/editor.md/downloads)](https://packagist.org/packages/yiier/editor.md) 
-[![Latest Unstable Version](https://poser.pugx.org/yiier/editor.md/v/unstable)](https://packagist.org/packages/yiier/editor.md) 
-[![License](https://poser.pugx.org/yiier/editor.md/license)](https://packagist.org/packages/yiier/editor.md)
+[![Latest Stable Version](https://poser.pugx.org/yiier/yii2-editor.md/v/stable)](https://packagist.org/packages/yiier/yii2-editor.md) 
+[![Total Downloads](https://poser.pugx.org/yiier/yii2-editor.md/downloads)](https://packagist.org/packages/yiier/yii2-editor.md) 
+[![Latest Unstable Version](https://poser.pugx.org/yiier/yii2-editor.md/v/unstable)](https://packagist.org/packages/yiier/yii2-editor.md) 
+[![License](https://poser.pugx.org/yiier/yii2-editor.md/license)](https://packagist.org/packages/yiier/yii2-editor.md)
 
 editor.md for Yii2
 
