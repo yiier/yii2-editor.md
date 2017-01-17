@@ -6,7 +6,7 @@ editor.md for Yii2
 [![Latest Unstable Version](https://poser.pugx.org/yiier/yii2-editor.md/v/unstable)](https://packagist.org/packages/yiier/yii2-editor.md) 
 [![License](https://poser.pugx.org/yiier/yii2-editor.md/license)](https://packagist.org/packages/yiier/yii2-editor.md)
 
-[]editor.md](https://github.com/pandao/editor.md) for Yii2
+[editor.md](https://github.com/pandao/editor.md) for Yii2
 
 Installation
 ------------
