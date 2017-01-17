@@ -11,11 +11,12 @@
         }
     ],
     "require": {
-        "yiisoft/yii2": "*"
+        "yiisoft/yii2": "*",
+        "bower-asset/editor.md": "*"
     },
     "autoload": {
         "psr-4": {
-            "yiier\\editor\\": ""
+            "yiier\\editor\\": "src"
         }
     }
 }
