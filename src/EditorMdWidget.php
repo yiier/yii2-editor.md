@@ -4,6 +4,7 @@
  * @copyright Copyright (c) 2017 ForEcho
  * @license http://www.forecho.com/
  */
+
 namespace yiier\editor;
 
 use yii\bootstrap\InputWidget;
@@ -23,28 +24,30 @@ class EditorMdWidget extends InputWidget
      */
     public function run()
     {
-        if ($this->hasModel()) {
-            $this->name = empty($this->options['name']) ? Html::getInputName($this->model, $this->attribute) :
-                $this->options['name'];
-            $this->value = Html::getAttributeValue($this->model, $this->attribute);
-        }
-        echo Html::tag('div', '', $this->options);
-        $this->registerClientScript();
+        $rows = '';
+        $id = 'editormd_' . $this->options['id'] ?: $this->id;
+        $rows .= Html::beginTag('div', ['id' => $id]);
+        $rows .= $this->hasModel() ? Html::activeTextarea($this->model, $this->attribute,
+            $this->options) : Html::textarea($this->name, $this->value, $this->options);
+        $rows .= Html::endTag('div');
+
+        $this->registerClientScript($id);
+        return $rows;
     }
 
-    protected function registerClientScript()
+    protected function registerClientScript($id)
     {
         $view = $this->getView();
         $this->initClientOptions();
         $editor = EditorMdAsset::register($view);
-        $this->clientOptions['value'] = $this->value ? $this->value : '';
-        $this->clientOptions['name'] = $this->name;
         $this->clientOptions['path'] = $editor->baseUrl . '/lib/';
         $jsOptions = Json::encode($this->clientOptions);
-        $id = $this->options['id'];
 
         if ($this->clientOptions['emoji']) {
-            $emoji = 'editormd.emoji = ' . Json::encode(['path' => 'http://www.webpagefx.com/tools/emoji-cheat-sheet/graphics/emojis/', 'ext' => ".png"]);
+            $emoji = 'editormd.emoji = ' . Json::encode([
+                    'path' => 'http://www.webfx.com/tools/emoji-cheat-sheet/graphics/emojis/',
+                    'ext' => ".png"
+                ]);
             $view->registerJs($emoji);
         }
         $js = 'var editor = editormd("' . $id . '", ' . $jsOptions . ');';
