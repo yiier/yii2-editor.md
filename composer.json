@@ -12,7 +12,7 @@
     ],
     "require": {
         "yiisoft/yii2": "*",
-        "bower-asset/editor.md": "*"
+        "npm-asset/editor.md": "*"
     },
     "autoload": {
         "psr-4": {
