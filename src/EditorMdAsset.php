@@ -6,7 +6,7 @@ use yii\web\AssetBundle;
 
 class EditorMdAsset extends AssetBundle
 {
-    public $sourcePath = '@bower/editor.md';
+    public $sourcePath = '@npm/editor.md';
 
     public function init()
     {
